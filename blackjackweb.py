@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request, session, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask("__main__")
+app = Flask(__name__)
 app.secret_key = "8173465983174"
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///users.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
