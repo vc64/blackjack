@@ -2,3 +2,8 @@ Flask
 
 flask_sqlalchemy
 
+
+
+gevent
+
+gunicorn
