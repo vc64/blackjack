@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+  {% for item in values %}
+    <p>Name: {{item.name}}  | |  Wins: {{item.win}}  | |  Money: {{item.money}}</p>
+  {% endfor %}
+
+{% endblock%}
