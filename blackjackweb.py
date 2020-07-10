@@ -48,7 +48,7 @@ def login():
   else:
     if "user" in session:
       return redirect(url_for("user"))
-    return render_template("/blackjack/templates/login.html")
+    return render_template("login.html")
 
 @app.route("/user")
 def user():
