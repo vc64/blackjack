@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles/gamestyle.css')}}">
+
+
+<div id = "main" width = "100%" height = "100%">
+
+  <image class="carddeal" id="dealer1" src="{{url_for('static', filename='/images/cardbackblue2.png')}}" width = 120></image> 
+  <image class="carddeal" id="dealer2" src="{{url_for('static', filename='/images/cardbackblue2.png')}}" width = 120></image>
+
+  <image class="cardFront" id="card1" src="{{url_for('static', filename='/images/cardbackblue2.png')}}" width = 120></image>
+  <image class="cardFront" id="card2" src="{{url_for('static', filename='/images/cardbackblue2.png')}}" width = 120></image>
+  <image class="cardFront" id="card3" src="{{url_for('static', filename='/images/cardbackblue2.png')}}" width = 120></image>
+
+  <!--
+  <image class="cardFront" id="movecarddown" src="{{url_for('static', filename='/images/cardbackblue2.png')}}" width = 120></image>
+  <image class="cardFront" id="movecardup" width = 116></image>
+  -->
+
+  <image id="back"></image>
+
+
+  <!--
+  <image class="dealercard1" width = 120></image>
+  <image class="dealercard2" width = 120></image>
+  <image id="usercard2" class="usercard" width = 120></image>
+  <image id="usercard1" class="usercard" width = 120></image>
+  -->
+
+  <!--
+  <image class="dealtcards" width = 120 src = "{{url_for('static', filename='/images/cardbackblue2.png')}}"></image>
+
+  <div id = "div"></div>
+
+  <div id = "thing"></div>
+  -->
+
+
+  <script type="text/javascript" src="static/scripts/blackjack.js"></script>
+
+  <input id="dealbtn" type="button" value="Deal" onclick="dealCards();" />
+  <input id="hitbtn" type="button" value="Hit" onclick="hit();" />
+  <input id="standbtn" type="button" value="Stand" onclick="stand();" />
+
+  <div id="betbox">
+    <p id="bet" width = 75px>Bet</p>
+    <p id="betnum" width = 75px></p>
+
+    <button class="arrow" id="uparrow" onclick="betuponce()" onmousedown="betup()" onmouseup="stopbet()"><i class="fa fa-caret-up"></i></button>
+    <button class="arrow" id="downarrow" onclick="betdownonce()" onmousedown="betdown()" onmouseup="stopbet()"><i class="fa fa-caret-down"></i></button>
+    
+  </div>
+
+  <div id="balancebox">
+    <!--
+    <p id="balance" width = 75px>Balance:</p>
+    -->
+    <p id="balancenum" width = 75px>$</p>
+  </div>
+
+  <p id="result">e</p>
+  
+  <!--
+  <script>
+    document.getElementById("balancenum").innerHTML = ;
+  </script>
+  -->
+
+  
+
+
+  
+
+</div>
+
+
+
+{% endblock%}
