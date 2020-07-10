@@ -1,1 +1,1 @@
-web: gunicorn blackjackweb:app --log-file=-
+web: gunicorn blackjackweb:app
