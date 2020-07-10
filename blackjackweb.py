@@ -48,7 +48,7 @@ def login():
   else:
     if "user" in session:
       return redirect(url_for("user"))
-    return render_template("login.html")
+    return render_template("templates/login.html")
 
 @app.route("/user")
 def user():
