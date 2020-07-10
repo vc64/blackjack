@@ -1,10 +1,11 @@
 from flask import Flask, redirect, url_for, render_template, request, session, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask("__main__", template_folder='templates', static_folder='static')
+app = Flask("__main__", template_folder='templates/', static_folder='static/')
 app.secret_key = "8173465983174"
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///users.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["EXPLAIN_TEMPLATE_LOADING"] = True
 
 data = SQLAlchemy(app)
 
